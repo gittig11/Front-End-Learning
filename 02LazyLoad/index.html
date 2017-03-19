@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				display: block;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<img class="lazy" alt="" width="600" height="480" data-original="img/1.jpg" />
+			<img class="lazy" alt="" width="600" height="480" data-original="img/2.jpg" />
+			<img class="lazy" alt="" width="600" height="480" data-original="img/3.jpg" />
+			<img class="lazy" alt="" width="600" height="480" data-original="img/4.jpg" />
+			<img class="lazy" alt="" width="600" height="480" data-original="img/5.jpg" />
+			<img class="lazy" alt="" width="600" height="480" data-original="img/6.jpg" />
+		</div>
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="jquery.lazyload.js"></script>
+		<script>
+			$(function() {
+				
+//				这将使所有 class 为 lazy 的图片将被延迟加载.
+//				$("img.lazy").lazyload();
+				
+				
+//				令图片在距离屏幕 200 像素时提前加载
+//				$("img.lazy").lazyload({
+//					threshold : 200
+//				});
+				
+        
+//				设置事件来触发加载
+				$("img.lazy").lazyload({
+					event : "click"
+				});
+			});
+			
+		</script>
+	</body>
+</html>
